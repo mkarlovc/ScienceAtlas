@@ -1,0 +1,142 @@
+﻿#boxContentRsr{display:none}
+#boxContentPrj{display:none}
+#boxContentOrg{display:none}
+#boxContentLec{display:none}
+
+#homeContent{display:none}
+#aboutContent{display:none}
+#helpContent{display:none}
+
+#sidebar1Rsr{
+display:none
+
+}
+#sidebar1 a{
+background-color:transparent;
+
+}
+#sidebar1Prj{display:none}
+#sidebar1Org{display:none}
+#sidebar2News{display:none}
+#sidebar1Searching{display:none; padding-top: 25px;}
+#sidebar1Help{display:none; padding-top: 25px;}
+#sidebar1About{display:none; padding-top: 25px;}
+
+#sSearchColl{display:none; }
+#sSearchComp{display:none}
+/*#sigCollCenter{display:none}
+#sigCollMap{display:none;padding:0; margin:0;}
+#sigCollOrg{display:none}
+#sigCompMap{display:none}*/
+#tabs{
+
+display:none;
+margin-top: -15px;
+}
+#imgs2{display:none}
+.sig
+{
+margin-bottom: 15px; width:853px; height:450px; background-color: background-image: linear-gradient(bottom, rgb(255,255,255) 43%, rgb(189,189,189) 87%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 43%, rgb(189,189,189) 87%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 43%, rgb(189,189,189) 87%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 43%, rgb(189,189,189) 87%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 43%, rgb(189,189,189) 87%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.43, rgb(255,255,255)),
+	color-stop(0.87, rgb(189,189,189))
+);; margin-left:0px; 
+}
+.ui-widget-header
+{
+max-height: 44px;
+width: 853px;
+}
+#loadingDiv{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    padding:auto;
+} 
+.loadingAnimation
+{}
+
+/* root element for scrollable */
+  .scrollable {
+ 
+/* required settings */
+position:relative;
+overflow:hidden;
+ 
+}
+ 
+/* root element for scrollable items */
+.scrollable .items {
+position:absolute;
+ 
+/* this time we have very large space for the height */
+height:20000em;
+width:100%;
+
+}
+
+.itemImg
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    float:left;
+    max-height:100px;
+}
+.pagingImg
+{
+ padding-left: 15px;
+ padding-right: 15px;
+ float:left;
+ max-height:40px;
+ clear:left;
+}
+.pagingText
+{
+
+}
+#compMapLayout
+{
+    position:absolute;
+    z-index:10;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cfcfcf), color-stop(1, #dfdfdf) );
+	background: -moz-linear-gradient( center top, #cfcfcf 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfcfcf', endColorstr='#dfdfdf');
+	background-color: #cfcfcf;
+	display: inline-block;
+	color: #777777;
+	font-family: arial;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #ffffff;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-top: 2px;
+}
+
+.text
+{
+  font-family:Tahoma;
+  font-size: 12px;  
+    }

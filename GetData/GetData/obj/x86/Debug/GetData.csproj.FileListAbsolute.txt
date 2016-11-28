@@ -1,0 +1,13 @@
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\bin\Debug\GetData.exe.config
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\bin\Debug\GetData.exe
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\bin\Debug\GetData.pdb
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\GetData.frmGetData.resources
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\GetData.Properties.Resources.resources
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\GetData.exe
+c:\users\mario\documents\visual studio 2010\Projects\GetData\GetData\obj\x86\Debug\GetData.pdb
+C:\Users\mario\Documents\Visual Studio 2010\Projects\GetData\GetData\bin\Debug\Newtonsoft.Json.Net35.dll
+C:\Users\mario\Documents\Visual Studio 2010\Projects\GetData\GetData\bin\Debug\Newtonsoft.Json.Net35.pdb
+C:\Users\mario\Documents\Visual Studio 2010\Projects\GetData\GetData\bin\Debug\Newtonsoft.Json.Net35.xml

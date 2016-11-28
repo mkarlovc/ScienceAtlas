@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://soap.cris.cobiss/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://soap.cris.cobiss/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://soap.cris.cobiss/">
+      <s:element name="SearchRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentPage" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sort" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchRetrieveResult" type="tns:SearchResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SearchResults">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecordsFound" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Records" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Retrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="methodCall" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveResult" type="tns:SearchResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResults" nillable="true" type="tns:SearchResults" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="SearchRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:Retrieve" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchRetrieveHttpGetIn">
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="entity" type="s:string" />
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="currentPage" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="sort" type="s:string" />
+    <wsdl:part name="fields" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:SearchResults" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveHttpGetIn">
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="entity" type="s:string" />
+    <wsdl:part name="methodCall" type="s:string" />
+    <wsdl:part name="fields" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:SearchResults" />
+  </wsdl:message>
+  <wsdl:message name="SearchRetrieveHttpPostIn">
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="entity" type="s:string" />
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="currentPage" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="sort" type="s:string" />
+    <wsdl:part name="fields" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:SearchResults" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveHttpPostIn">
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="entity" type="s:string" />
+    <wsdl:part name="methodCall" type="s:string" />
+    <wsdl:part name="fields" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:SearchResults" />
+  </wsdl:message>
+  <wsdl:portType name="CrisDataSoap">
+    <wsdl:operation name="SearchRetrieve">
+      <wsdl:input message="tns:SearchRetrieveSoapIn" />
+      <wsdl:output message="tns:SearchRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <wsdl:input message="tns:RetrieveSoapIn" />
+      <wsdl:output message="tns:RetrieveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CrisDataHttpGet">
+    <wsdl:operation name="SearchRetrieve">
+      <wsdl:input message="tns:SearchRetrieveHttpGetIn" />
+      <wsdl:output message="tns:SearchRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <wsdl:input message="tns:RetrieveHttpGetIn" />
+      <wsdl:output message="tns:RetrieveHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CrisDataHttpPost">
+    <wsdl:operation name="SearchRetrieve">
+      <wsdl:input message="tns:SearchRetrieveHttpPostIn" />
+      <wsdl:output message="tns:SearchRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <wsdl:input message="tns:RetrieveHttpPostIn" />
+      <wsdl:output message="tns:RetrieveHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CrisDataSoap" type="tns:CrisDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchRetrieve">
+      <soap:operation soapAction="http://soap.cris.cobiss/SearchRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <soap:operation soapAction="http://soap.cris.cobiss/Retrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CrisDataSoap12" type="tns:CrisDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchRetrieve">
+      <soap12:operation soapAction="http://soap.cris.cobiss/SearchRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <soap12:operation soapAction="http://soap.cris.cobiss/Retrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CrisDataHttpGet" type="tns:CrisDataHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SearchRetrieve">
+      <http:operation location="/SearchRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <http:operation location="/Retrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CrisDataHttpPost" type="tns:CrisDataHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SearchRetrieve">
+      <http:operation location="/SearchRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <http:operation location="/Retrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CrisData">
+    <wsdl:port name="CrisDataSoap" binding="tns:CrisDataSoap">
+      <soap:address location="http://sicris.izum.si/CrisXMLWebServis/CrisXMLWebServis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CrisDataSoap12" binding="tns:CrisDataSoap12">
+      <soap12:address location="http://sicris.izum.si/CrisXMLWebServis/CrisXMLWebServis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CrisDataHttpGet" binding="tns:CrisDataHttpGet">
+      <http:address location="http://sicris.izum.si/CrisXMLWebServis/CrisXMLWebServis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CrisDataHttpPost" binding="tns:CrisDataHttpPost">
+      <http:address location="http://sicris.izum.si/CrisXMLWebServis/CrisXMLWebServis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

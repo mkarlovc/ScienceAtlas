@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PrjOfOrgJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjOfOrgJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrjOfOrgJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjOfRsrJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjOfRsrJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrjOfRsrJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjByRsrIdsJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PrjByRsrIdsJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrjByRsrIdsJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjByIdJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjByIdJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrjByIdJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjByIdsJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrjByIdsJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrjByIdsJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProfileOfRsrJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProfileOfRsrJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProfileOfRsrJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrByIdsJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrByIdsJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RsrByIdsJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrOnPrjJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrOnPrjJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RsrOnPrjJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrInOrgJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RsrInOrgJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RsrInOrgJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollaborationOfRsrOnPrj1Json">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollaborationOfRsrOnPrj1JsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollaborationOfRsrOnPrj1JsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrgByRsrIdsJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrgByRsrIdsJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrgByRsrIdsJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrgByIdJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrgByIdJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrgByIdJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LecOfRsrJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LecOfRsrJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LecOfRsrJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollaborationOfRsrOnBib1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollaborationOfRsrOnBib1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollaborationOfRsrOnBib1Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexRsr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexRsrResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateIndexRsr_en">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexRsr_enResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateIndexPrj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexPrjResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateIndexPrj_en">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexPrj_enResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateIndexOrg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIndexOrgResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateAutocompleteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAutocompleteFileResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PrjOfOrgJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:PrjOfOrgJson" />
+  </wsdl:message>
+  <wsdl:message name="PrjOfOrgJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:PrjOfOrgJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrjOfRsrJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:PrjOfRsrJson" />
+  </wsdl:message>
+  <wsdl:message name="PrjOfRsrJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:PrjOfRsrJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrjByRsrIdsJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:PrjByRsrIdsJson" />
+  </wsdl:message>
+  <wsdl:message name="PrjByRsrIdsJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:PrjByRsrIdsJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrjByIdJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:PrjByIdJson" />
+  </wsdl:message>
+  <wsdl:message name="PrjByIdJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:PrjByIdJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrjByIdsJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:PrjByIdsJson" />
+  </wsdl:message>
+  <wsdl:message name="PrjByIdsJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:PrjByIdsJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProfileOfRsrJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:ProfileOfRsrJson" />
+  </wsdl:message>
+  <wsdl:message name="ProfileOfRsrJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:ProfileOfRsrJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="RsrByIdsJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:RsrByIdsJson" />
+  </wsdl:message>
+  <wsdl:message name="RsrByIdsJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:RsrByIdsJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="RsrOnPrjJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:RsrOnPrjJson" />
+  </wsdl:message>
+  <wsdl:message name="RsrOnPrjJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:RsrOnPrjJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="RsrInOrgJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:RsrInOrgJson" />
+  </wsdl:message>
+  <wsdl:message name="RsrInOrgJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:RsrInOrgJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollaborationOfRsrOnPrj1JsonSoapIn">
+    <wsdl:part name="parameters" element="tns:CollaborationOfRsrOnPrj1Json" />
+  </wsdl:message>
+  <wsdl:message name="CollaborationOfRsrOnPrj1JsonSoapOut">
+    <wsdl:part name="parameters" element="tns:CollaborationOfRsrOnPrj1JsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrgByRsrIdsJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:OrgByRsrIdsJson" />
+  </wsdl:message>
+  <wsdl:message name="OrgByRsrIdsJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:OrgByRsrIdsJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrgByIdJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:OrgByIdJson" />
+  </wsdl:message>
+  <wsdl:message name="OrgByIdJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:OrgByIdJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="LecOfRsrJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:LecOfRsrJson" />
+  </wsdl:message>
+  <wsdl:message name="LecOfRsrJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:LecOfRsrJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollaborationOfRsrOnBib1SoapIn">
+    <wsdl:part name="parameters" element="tns:CollaborationOfRsrOnBib1" />
+  </wsdl:message>
+  <wsdl:message name="CollaborationOfRsrOnBib1SoapOut">
+    <wsdl:part name="parameters" element="tns:CollaborationOfRsrOnBib1Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexRsrSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateIndexRsr" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexRsrSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateIndexRsrResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexRsr_enSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateIndexRsr_en" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexRsr_enSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateIndexRsr_enResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexPrjSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateIndexPrj" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexPrjSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateIndexPrjResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexPrj_enSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateIndexPrj_en" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexPrj_enSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateIndexPrj_enResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexOrgSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateIndexOrg" />
+  </wsdl:message>
+  <wsdl:message name="CreateIndexOrgSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateIndexOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAutocompleteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAutocompleteFile" />
+  </wsdl:message>
+  <wsdl:message name="CreateAutocompleteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAutocompleteFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="PrjOfOrgJson">
+      <wsdl:input message="tns:PrjOfOrgJsonSoapIn" />
+      <wsdl:output message="tns:PrjOfOrgJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrjOfRsrJson">
+      <wsdl:input message="tns:PrjOfRsrJsonSoapIn" />
+      <wsdl:output message="tns:PrjOfRsrJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrjByRsrIdsJson">
+      <wsdl:input message="tns:PrjByRsrIdsJsonSoapIn" />
+      <wsdl:output message="tns:PrjByRsrIdsJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdJson">
+      <wsdl:input message="tns:PrjByIdJsonSoapIn" />
+      <wsdl:output message="tns:PrjByIdJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdsJson">
+      <wsdl:input message="tns:PrjByIdsJsonSoapIn" />
+      <wsdl:output message="tns:PrjByIdsJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProfileOfRsrJson">
+      <wsdl:input message="tns:ProfileOfRsrJsonSoapIn" />
+      <wsdl:output message="tns:ProfileOfRsrJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RsrByIdsJson">
+      <wsdl:input message="tns:RsrByIdsJsonSoapIn" />
+      <wsdl:output message="tns:RsrByIdsJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RsrOnPrjJson">
+      <wsdl:input message="tns:RsrOnPrjJsonSoapIn" />
+      <wsdl:output message="tns:RsrOnPrjJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RsrInOrgJson">
+      <wsdl:input message="tns:RsrInOrgJsonSoapIn" />
+      <wsdl:output message="tns:RsrInOrgJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnPrj1Json">
+      <wsdl:input message="tns:CollaborationOfRsrOnPrj1JsonSoapIn" />
+      <wsdl:output message="tns:CollaborationOfRsrOnPrj1JsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrgByRsrIdsJson">
+      <wsdl:input message="tns:OrgByRsrIdsJsonSoapIn" />
+      <wsdl:output message="tns:OrgByRsrIdsJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrgByIdJson">
+      <wsdl:input message="tns:OrgByIdJsonSoapIn" />
+      <wsdl:output message="tns:OrgByIdJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LecOfRsrJson">
+      <wsdl:input message="tns:LecOfRsrJsonSoapIn" />
+      <wsdl:output message="tns:LecOfRsrJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnBib1">
+      <wsdl:input message="tns:CollaborationOfRsrOnBib1SoapIn" />
+      <wsdl:output message="tns:CollaborationOfRsrOnBib1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr">
+      <wsdl:input message="tns:CreateIndexRsrSoapIn" />
+      <wsdl:output message="tns:CreateIndexRsrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr_en">
+      <wsdl:input message="tns:CreateIndexRsr_enSoapIn" />
+      <wsdl:output message="tns:CreateIndexRsr_enSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj">
+      <wsdl:input message="tns:CreateIndexPrjSoapIn" />
+      <wsdl:output message="tns:CreateIndexPrjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj_en">
+      <wsdl:input message="tns:CreateIndexPrj_enSoapIn" />
+      <wsdl:output message="tns:CreateIndexPrj_enSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexOrg">
+      <wsdl:input message="tns:CreateIndexOrgSoapIn" />
+      <wsdl:output message="tns:CreateIndexOrgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutocompleteFile">
+      <wsdl:input message="tns:CreateAutocompleteFileSoapIn" />
+      <wsdl:output message="tns:CreateAutocompleteFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrjOfOrgJson">
+      <soap:operation soapAction="http://tempuri.org/PrjOfOrgJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjOfRsrJson">
+      <soap:operation soapAction="http://tempuri.org/PrjOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByRsrIdsJson">
+      <soap:operation soapAction="http://tempuri.org/PrjByRsrIdsJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdJson">
+      <soap:operation soapAction="http://tempuri.org/PrjByIdJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdsJson">
+      <soap:operation soapAction="http://tempuri.org/PrjByIdsJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProfileOfRsrJson">
+      <soap:operation soapAction="http://tempuri.org/ProfileOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrByIdsJson">
+      <soap:operation soapAction="http://tempuri.org/RsrByIdsJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrOnPrjJson">
+      <soap:operation soapAction="http://tempuri.org/RsrOnPrjJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrInOrgJson">
+      <soap:operation soapAction="http://tempuri.org/RsrInOrgJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnPrj1Json">
+      <soap:operation soapAction="http://tempuri.org/CollaborationOfRsrOnPrj1Json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrgByRsrIdsJson">
+      <soap:operation soapAction="http://tempuri.org/OrgByRsrIdsJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrgByIdJson">
+      <soap:operation soapAction="http://tempuri.org/OrgByIdJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LecOfRsrJson">
+      <soap:operation soapAction="http://tempuri.org/LecOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnBib1">
+      <soap:operation soapAction="http://tempuri.org/CollaborationOfRsrOnBib1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr">
+      <soap:operation soapAction="http://tempuri.org/CreateIndexRsr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr_en">
+      <soap:operation soapAction="http://tempuri.org/CreateIndexRsr_en" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj">
+      <soap:operation soapAction="http://tempuri.org/CreateIndexPrj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj_en">
+      <soap:operation soapAction="http://tempuri.org/CreateIndexPrj_en" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexOrg">
+      <soap:operation soapAction="http://tempuri.org/CreateIndexOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutocompleteFile">
+      <soap:operation soapAction="http://tempuri.org/CreateAutocompleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrjOfOrgJson">
+      <soap12:operation soapAction="http://tempuri.org/PrjOfOrgJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjOfRsrJson">
+      <soap12:operation soapAction="http://tempuri.org/PrjOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByRsrIdsJson">
+      <soap12:operation soapAction="http://tempuri.org/PrjByRsrIdsJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdJson">
+      <soap12:operation soapAction="http://tempuri.org/PrjByIdJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrjByIdsJson">
+      <soap12:operation soapAction="http://tempuri.org/PrjByIdsJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProfileOfRsrJson">
+      <soap12:operation soapAction="http://tempuri.org/ProfileOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrByIdsJson">
+      <soap12:operation soapAction="http://tempuri.org/RsrByIdsJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrOnPrjJson">
+      <soap12:operation soapAction="http://tempuri.org/RsrOnPrjJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsrInOrgJson">
+      <soap12:operation soapAction="http://tempuri.org/RsrInOrgJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnPrj1Json">
+      <soap12:operation soapAction="http://tempuri.org/CollaborationOfRsrOnPrj1Json" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrgByRsrIdsJson">
+      <soap12:operation soapAction="http://tempuri.org/OrgByRsrIdsJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrgByIdJson">
+      <soap12:operation soapAction="http://tempuri.org/OrgByIdJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LecOfRsrJson">
+      <soap12:operation soapAction="http://tempuri.org/LecOfRsrJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollaborationOfRsrOnBib1">
+      <soap12:operation soapAction="http://tempuri.org/CollaborationOfRsrOnBib1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr">
+      <soap12:operation soapAction="http://tempuri.org/CreateIndexRsr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexRsr_en">
+      <soap12:operation soapAction="http://tempuri.org/CreateIndexRsr_en" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj">
+      <soap12:operation soapAction="http://tempuri.org/CreateIndexPrj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexPrj_en">
+      <soap12:operation soapAction="http://tempuri.org/CreateIndexPrj_en" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIndexOrg">
+      <soap12:operation soapAction="http://tempuri.org/CreateIndexOrg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutocompleteFile">
+      <soap12:operation soapAction="http://tempuri.org/CreateAutocompleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:57985/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:57985/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

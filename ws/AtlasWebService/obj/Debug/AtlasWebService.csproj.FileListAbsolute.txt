@@ -1,0 +1,8 @@
+c:\users\mario\documents\visual studio 2010\Projects\AtlasWebService\AtlasWebService\obj\Debug\ResolveAssemblyReference.cache
+c:\users\mario\documents\visual studio 2010\Projects\AtlasWebService\AtlasWebService\bin\AtlasWebService.dll
+c:\users\mario\documents\visual studio 2010\Projects\AtlasWebService\AtlasWebService\bin\AtlasWebService.pdb
+c:\users\mario\documents\visual studio 2010\Projects\AtlasWebService\AtlasWebService\obj\Debug\AtlasWebService.dll
+c:\users\mario\documents\visual studio 2010\Projects\AtlasWebService\AtlasWebService\obj\Debug\AtlasWebService.pdb
+C:\Users\mario\Documents\Visual Studio 2010\Projects\AtlasWebService\AtlasWebService\bin\Lucene.Net.dll
+C:\Users\mario\Documents\Visual Studio 2010\Projects\AtlasWebService\AtlasWebService\bin\Lucene.Net.pdb
+C:\Users\mario\Documents\Visual Studio 2010\Projects\AtlasWebService\AtlasWebService\bin\Lucene.Net.xml

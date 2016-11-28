@@ -1,0 +1,490 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+@font-face {
+font-family: ScienceLight;
+src: url(scienceLight.ttf);
+}
+@font-face {
+font-family: ScienceMedium;
+src: url(scienceMedium.ttf);
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	padding-left: 15px;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #074E96;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color:#074E96;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+#btns a:link {
+	color: #074E96;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	/* [disabled]width: 960px; */
+	 
+	background: -webkit-gradient(
+				  radial, 350 15%, 1, 350 15%, 500, from(#E3E3E3), to(#FFF)
+				);
+	background: -moz-radial-gradient(
+			  350px 15%, circle, ##E3E3E3 500px, #FFF 400px
+				);
+	margin: 0 0; /* the auto value on the sides, coupled with the width, centers the layout */
+	background:url(../img/back.jpg)\9;;
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #FFFFFF;
+	background-image: url(../img/back_header.jpg);
+	/* [disabled]background-image: -o-linear-gradient(bottom, rgb(100,102,104) 26%, rgb(156,159,164) 73%); */
+	/* [disabled]background-image: -moz-linear-gradient(bottom, rgb(100,102,104) 26%, rgb(156,159,164) 73%); */
+	/* [disabled]background-image: -webkit-linear-gradient(bottom, rgb(100,102,104) 26%, rgb(156,159,164) 73%); */
+	/* [disabled]background-image: -ms-linear-gradient(bottom, rgb(100,102,104) 26%, rgb(156,159,164) 73%); */
+	/* [disabled]background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.26, rgb(100,102,104)),
+	color-stop(0.73, rgb(156,159,164))
+); */
+	position: relative;
+	width: 100%;
+	height: 157px;
+	float: left;
+	clear: both;
+	background-repeat: repeat-x;
+}
+
+.sidebar1 {
+	float: left;
+	width: 357px;
+	 
+	padding-bottom: 10px;
+	 
+	 
+	/* [disabled]margin-top: 157px; */
+}
+
+.sidebar2 {
+	float: left;
+	width: 357px;
+	 
+	padding-bottom: 10px;
+	 
+	 
+	min-height: 650px;
+	/* [disabled]margin-top: 157px; */
+}
+.content {
+	width: 70%;
+	margin-left: 357px;
+	padding-top:48px;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding-top: 0;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 17px;
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #FFFFFF;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.sidebar2 h1  {
+	text-align: left;
+	font-family: ScienceLight, Helvetica, sans-serif;
+	margin-top: 2px;
+	color: #666;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.sidebar1 h1 {
+	text-align: right;
+	font-family: ScienceLight, Helvetica, sans-serif;
+	margin-top: 2px;
+	color: #666;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.content h1 {
+	text-align: left;
+	font-family: ScienceLight, Helvetica, sans-serif;
+	color: #666;
+	padding-top: 45px;
+}
+.content h1.colh1 {
+	 
+	padding-top: 0px;
+}
+ 
+.sidebar2 h2 a, .sidebar2 h2 a:visited {
+	background-color: #004a94;
+	color: #FFF;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: left;
+	text-decoration: none;
+}
+.sidebar2 h2 a:hover {
+	background-color: #FFF;
+	color: #004A94;
+	text-decoration: none;
+}
+.sidebar2 p {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+	line-height: 22px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	text-align: justify;
+}
+.sidebar1 p {
+background: transparent;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+	line-height: 22px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	text-align: right;
+}
+
+.header #search {
+	width: 700px;
+	height: 125px;
+	padding-top: 20px;
+	padding-left: 35px;
+	margin-left: 357px;
+}
+.header #logo {
+	float: left;
+	height: 158px;
+	width: 357px;
+}
+#form1 #textfield {
+	height: 46px;
+	width: 394px;
+	font-size: 24px;
+	padding-left: 20px;
+	color: #666;
+}
+.btn_left {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cfcfcf), color-stop(1, #dfdfdf) );
+	background: -moz-linear-gradient( center top, #cfcfcf 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfcfcf', endColorstr='#dfdfdf');
+	background-color: #cfcfcf;
+	display: inline-block;
+	color: #777777;
+	font-family: arial;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #ffffff;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-top: 2px;
+}.btn_left:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #cfcfcf) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #cfcfcf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#cfcfcf');
+	background-color:#dfdfdf;
+}.btn_left:active {
+	position:relative;
+	top:1px;
+}
+/* This imageless css button was generated by CSSButtonGenerator.com */#search #form1 #btns {
+	width: 150px;
+	margin-left: -2px;
+	margin-top: 2px;
+}
+
+#btn_submit {
+  
+	margin-left: 289px;
+	margin-top:  -58px;
+}
+
+a.btn_isci {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6ae817), color-stop(1, #58ad3b) );
+	background:-moz-linear-gradient( center top, #6ae817 5%, #58ad3b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ae817', endColorstr='#58ad3b');
+	background-color:#6ae817;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:17px 38px;
+	text-decoration:none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}a.btn_isci:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #58ad3b), color-stop(1, #6ae817) );
+	background:-moz-linear-gradient( center top, #58ad3b 5%, #6ae817 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#58ad3b', endColorstr='#6ae817');
+	background-color:#58ad3b;
+}a.btn_isci:active {
+	position: relative;
+	top: 1px;
+	
+}
+
+
+
+
+
+.footer p {
+	font-size: 12px;
+	padding-left: 380px;
+	color: #666;
+}
+.content p {
+	font-size: 12px;
+	color: #616566;
+}
+.sidebar1 #imgsRsr, .sidebar1 #imgsPrj, .sidebar1 #imgsOrg, .sidebar2 #imgs {
+	text-align: right;
+	padding: 15px;
+	height: 12px;
+} 
+.sidebar2 #imgs {
+	text-align: right;
+	padding: 15px;
+	height: 12px;
+}
+.sidebar1 .tag {
+	background-color: #074E96;
+	color: #FFF;
+	line-height: 23px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	font-size: 14px;
+}
+.content h2 {
+  margin: 0px;
+	padding: 0px;
+	font-size: 22px;
+	background-color: #074E96;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 5;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+.content .boxContent {
+	float: left;
+	width: 410px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+}
+.content #imgs2 {
+	height: 45px;
+	width: 87%;
+	padding-top: -1px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#main {
+	float: left;
+	width: 100%;
+	min-height: 400px;
+}
+.boxContent .paginator {
+	text-align: center;
+	margin-top: 25px;
+	font-size: 14px;
+	border-top: solid 1px #CCC;
+	padding-top: 8px;
+	word-spacing: 15px;
+}
+.boxContent .paginator .current{
+    margin-left: 5px;
+		margin-right: 5px;
+}
+.paginator a, .paginator a:visited  {
+		margin-left: 5px;
+		margin-right: 5px;
+}
+.current1 {
+    background-color: #074E96;
+    color: #fff;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 4px;
+}
+.prev {
+  padding: 4px;
+  background-color: #fff;
+	color: #666;
+	margin-right: 5px;
+}
+.next {
+  padding: 4px;
+	color: #666;
+	margin-left: 5px;
+	background-color: #fff;
+}
+
+.sidebar1 p img {
+	margin-left: 15px;
+}
+.collaboration {
+	background-image: url(../img/colaboration_big.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+@-moz-document url-prefix() { 
+  .container {  
+     background:url(../img/back.jpg) no-repeat;
+  }
+  .btn_left {
+	margin-bottom: 3px;
+   } }
+#btns {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 150px;
+}
+
+
+ }#imgs2 ul li {
+	/* [disabled]display: inline; */
+}
+.btn_collaboration {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616566), color-stop(1, #3d3f40) );
+	background:-moz-linear-gradient( center top, #616566 5%, #3d3f40 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616566', endColorstr='#3d3f40');
+	background-color:#616566;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:8px 21px;
+	text-decoration:none;
+}.btn_collaboration:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d3f40), color-stop(1, #616566) );
+	background:-moz-linear-gradient( center top, #3d3f40 5%, #616566 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3f40', endColorstr='#616566');
+	background-color:#3d3f40;
+}.btn_collaboration:active {
+	position:relative;
+	left:1px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+.sidebar1 a{
+background-color:transparent;
+margin-left: 0px;
+		margin-right: 0px;
+		padding: 0px;
+}
+
+#searchresultsLec {
+ 		margin-bottom: 10px;
+		padding: 10px;
+}

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GetData.Classification">
+    <Position X="4.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACAAAAgAAAIIAAAAAAAAQAAACAAAABgAAAAQAAAgAA=</HashCode>
+      <FileName>Classification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Education">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAEAwAAhAAAAIAAAAAAAQAAACAAIAAgACAAACAAAAI=</HashCode>
+      <FileName>Education.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.frmGetData" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQOALv1wFCgj0xpgRiCRgEADGqDQTxkJMBcQASoaAKs=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Organization">
+    <Position X="4.5" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACCAAAgAAAAIAIAAAACAQAAAAEAAAAAAAAAAAAAgg=</HashCode>
+      <FileName>Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.PrjOrg">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAIAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PrjOrg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Program" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Project">
+    <Position X="2.5" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAACCgABgAAAAIAAACAAAAQhCAEEAAgAAAAAAEAAwgg=</HashCode>
+      <FileName>Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Researcher">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AASCCAAkgCAAoQAgAIEAAQAAAAEJAABACQBAQAAAwgg=</HashCode>
+      <FileName>Researcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.RsrOrg">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAABAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RsrOrg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.RsrPrj">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RsrPrj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Properties.Resources" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.Properties.Settings" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.CrisWebService.CrisData" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQIQCCCAAAEAAAAkAAAAAAAQAAACAAAAAAAECE=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.CrisWebService.SearchResults" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.CrisWebService.SearchRetrieveCompletedEventArgs" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetData.CrisWebService.RetrieveCompletedEventArgs" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="GetData.CrisWebService.SearchRetrieveCompletedEventHandler" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="GetData.CrisWebService.RetrieveCompletedEventHandler" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Web References\CrisWebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
